@@ -1,10 +1,10 @@
 package br.sp.senai.jandira.calculo_area.model;
 
-public class Retangulo {
+public class Triangulo {
 	
 	private double base;
 	private double altura;
-
+	
 	public void setBase (double base) {
 		this.base = base;
 	}
@@ -22,26 +22,18 @@ public class Retangulo {
 	}
 	
 	public double calcularArea() {
-		double area = base * altura;
+		double area = base*altura/2;
 		return area;
 	}
 	
-	public double calcularPerimetro() {
-		double perimetro = 2 * (base + altura);
-		return perimetro;
-	}
-	
-	public void mostrarDados () {
+	public void mostrarDados() {
 		double area = calcularArea();
-		double perimetro = calcularPerimetro();
-		System.out.println("=======================");
-		System.out.println("retângulo");
-		System.out.println("-----------------------");
+		System.out.println("==================");
+		System.out.println("triângulo");
+		System.out.println("-------------------");
 		System.out.printf("Base: %s \n", base);
 		System.out.printf("Altura: %s \n", altura);
-		System.out.printf("Perimetro:%s \n", perimetro);
 		System.out.printf("Area:%s \n", area);
 	}
-	
-	
+
 }
